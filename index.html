@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healix Ai</title>
   <link rel="icon" type="image/png" href="https://files.catbox.moe/xq9o4m.jpg">
-  <!-- @TargetEric -->
+  <!-- TargetEric -->
   <style>
     * {
       box-sizing: border-box;
@@ -44,14 +44,14 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      overflow: hidden; /* Ensure the image fits within the circle */
+      overflow: hidden;
       margin-right: 15px;
       flex-shrink: 0;
     }
     .bot-avatar img {
-      width: 100%; /* Make the image fill the container */
-      height: auto; /* Maintain aspect ratio */
-      display: block; /* Remove bottom space */
+      width: 100%;
+      height: auto;
+      display: block;
     }
     .chat-header h1 {
       font-size: 1.5rem;
@@ -64,7 +64,7 @@
       background: #f8fafc;
       border-radius: 15px;
       margin-bottom: 15px;
-      scroll-behavior: smooth;
+      scroll-behavior: smooth; /* Ensure smooth scrolling */
     }
     .message {
       margin-bottom: 15px;
@@ -116,7 +116,7 @@
       border-color: #667eea;
     }
     #send-button {
-      padding: 12px 20px;
+      padding:12px 20px;
       background: linear-gradient(135deg, #667eea, #764ba2);
       color: #fff;
       border: none;
@@ -154,7 +154,7 @@
   <div class="chat-container">
     <div class="chat-header">
       <div class="bot-avatar">
-        <img src="https://i.ibb.co/thpcrWb/photo-2025-01-16-10-48-36.jpg" alt="Bot Logo"> <!-- Replace with your logo URL -->
+        <img src="https://i.ibb.co/thpcrWb/photo-2025-01-16-10-48-36.jpg" alt="Bot Logo">
       </div>
       <h1>Healix</h1>
     </div>
@@ -171,18 +171,6 @@
     const sendButton = document.getElementById('send-button');
     const chatMessages = document.getElementById('chat-messages');
     const typingIndicator = document.getElementById('typing-indicator');
-    let startY = 0;
-
-    document.addEventListener('touchstart', (e) => {
-      startY = e.touches[0].clientY;
-    });
-
-    document.addEventListener('touchmove', (e) => {
-      const currentY = e.touches[0].clientY;
-      if (currentY > startY + 50 && window.scrollY === 0) {
-        location.reload(); // Refresh the page
-      }
-    });
 
     async function sendMessage() {
       const message = messageInput.value.trim();
@@ -214,7 +202,7 @@
       messageContent.textContent = text;
       messageDiv.appendChild(messageContent);
       chatMessages.appendChild(messageDiv);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
+      chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to the bottom
     }
 
     sendButton.addEventListener('click', sendMessage);
@@ -222,8 +210,9 @@
       if (e.key === 'Enter') sendMessage();
     });
 
+    // Initial welcome message
     addMessage('Welcome to Healix AI – Your Virtual Health Companion! How can I help you today?', 'bot');
   </script>
+  <!-- made by @TargetEric -->
 </body>
 </html>
-  <!-- @TargetEric -->
