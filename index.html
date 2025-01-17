@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Healix Ai</title>
+  <!--   This Code Is Made By @TargetEric -->
   <link rel="icon" type="image/png" href="https://files.catbox.moe/xq9o4m.jpg">
   <style>
     * {
@@ -43,18 +43,15 @@
     .bot-avatar {
       width: 45px;
       height: 45px;
-      background: #764ba2;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow: hidden; /* Ensure the image fits within the circle */
       margin-right: 15px;
       flex-shrink: 0;
     }
-    .bot-avatar svg {
-      width: 25px;
-      height: 25px;
-      fill: #fff;
+    .bot-avatar img {
+      width: 100%; /* Make the image fill the container */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Remove bottom space */
     }
     .chat-header h1 {
       font-size: 1.5rem;
@@ -153,13 +150,12 @@
     }
   </style>
 </head>
+<!--   This Code Is Made By @TargetEric -->
 <body>
   <div class="chat-container">
     <div class="chat-header">
       <div class="bot-avatar">
-        <svg viewBox="0 0 24 24">
-          <path d="M12,2A10,10 0 1,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 1,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z"/>
-        </svg>
+        <img src="https://i.ibb.co/thpcrWb/photo-2025-01-16-10-48-36.jpg" alt="Bot Logo"> <!-- Replace with your logo URL -->
       </div>
       <h1>Healix</h1>
     </div>
@@ -231,3 +227,4 @@
   </script>
 </body>
 </html>
+<!--   This Code Is Made By @TargetEric -->
